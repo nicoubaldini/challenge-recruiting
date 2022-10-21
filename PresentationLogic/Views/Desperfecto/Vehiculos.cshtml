@@ -1,0 +1,57 @@
+﻿@model IEnumerable<PresentationLogic.Models.Desperfecto>
+
+@{
+    ViewBag.Title = "Vehiculos";
+}
+
+<h2>Vehiculos</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdDesperfecto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdVehiculo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManoObra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TiempoDias)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdDesperfecto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdVehiculo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ManoObra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TiempoDias)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.IdDesperfecto }) |
+            @Html.ActionLink("Details", "Details", new { id = item.IdDesperfecto }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IdDesperfecto })
+        </td>
+    </tr>
+}
+
+</table>

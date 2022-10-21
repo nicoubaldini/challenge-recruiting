@@ -1,0 +1,58 @@
+﻿@model PresentationLogic.Models.Desperfecto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Desperfecto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdDesperfecto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdDesperfecto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdVehiculo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdVehiculo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ManoObra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ManoObra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TiempoDias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TiempoDias)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.IdDesperfecto  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
